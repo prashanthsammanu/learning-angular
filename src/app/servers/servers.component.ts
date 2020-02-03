@@ -4,14 +4,18 @@ import { Component, OnInit } from '@angular/core';
   // tslint:disable-next-line: component-selector
   // selector: '[app-servers]',
   selector:'.app-servers',
-  template: `
-  <app-server></app-server>
-  <app-server></app-server>`,
+ // template: `
+  //<app-server></app-server>
+  //<app-server></app-server>`,
+
+  templateUrl: './servers.component.html',
   styleUrls: ['./servers.component.css']
 })
 export class ServersComponent implements OnInit {
-
-  constructor() { }
+   allowNewSever = false;
+  constructor() { 
+    setTimeout(() => {this.allowNewSever=true;}, 2000);
+  }
 
   ngOnInit() {
   }
